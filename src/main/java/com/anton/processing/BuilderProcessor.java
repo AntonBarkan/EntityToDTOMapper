@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import com.google.auto.service.AutoService;
 
 @SupportedAnnotationTypes(
-    "com.dig.processor.annotation.BuilderProperty")
+    "com.anton.processing.annotation.BuilderProperty")
 @SupportedSourceVersion(SourceVersion.RELEASE_11)
 @AutoService(Processor.class)
 public class BuilderProcessor extends AbstractProcessor {
