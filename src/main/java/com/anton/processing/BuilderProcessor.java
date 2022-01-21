@@ -66,7 +66,7 @@ public class BuilderProcessor extends AbstractProcessor {
         String builderSimpleClassName = builderClassName.substring(lastDot + 1);
 
         System.out.println("---> " + builderClassName);
-        JavaFileObject builderFile = processingEnv.getFiler().createSourceFile("test/" + builderClassName);
+        JavaFileObject builderFile = processingEnv.getFiler().createSourceFile(builderClassName);
         try (PrintWriter out = new PrintWriter(builderFile.openWriter())) {
 
             if (packageName != null) {
