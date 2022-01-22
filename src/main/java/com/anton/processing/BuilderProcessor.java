@@ -1,27 +1,24 @@
 package com.anton.processing;
 
+import com.anton.processing.annotations.FromClass;
+import com.anton.processing.annotations.PathMapping;
+import com.google.auto.service.AutoService;
+
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.AnnotationMirror;
 import javax.lang.model.element.AnnotationValue;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
-import javax.lang.model.type.ExecutableType;
 import javax.lang.model.util.Elements;
-import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.annotation.Annotation;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import com.anton.processing.annotations.FromClass;
-import com.anton.processing.annotations.PathMapping;
-import com.google.auto.service.AutoService;
 
 @SupportedAnnotationTypes({
         "com.anton.processing.annotations.FromClass"
