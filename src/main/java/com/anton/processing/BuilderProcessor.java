@@ -106,7 +106,7 @@ public class BuilderProcessor extends AbstractProcessor {
             for (Element e : fildToMapInClass) {
                 out.print("    ");
                 out.print("@Mapping(target = \"" + e.getSimpleName().toString()
-                        + "\", source = " + getAnnotationValue(fildToMapInClass.get(0), PathMapping.class, "value").get() + ")");
+                        + "\", source = " + getAnnotationValue(e, PathMapping.class, "value").get() + ")");
                 out.println();
             }
             out.print("    " + fromName);
